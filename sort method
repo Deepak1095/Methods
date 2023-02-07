@@ -1,0 +1,82 @@
+//sort method
+
+let arr= [40, 1, 5, 200];
+
+(method 1)
+arr.sort((a,b)=>a-b)
+
+(method 2)
+arr.sort(function(a,b){return a-b})
+
+(method 3)
+function sorting(a,b){
+  return  a-b
+}
+
+arr.sort(sorting)
+
+(method 4)
+arr.sort((a,b)=>{
+  if(a>b){
+    return 1
+  }
+  if(a<b){
+    return -1
+  }
+  return 0
+})
+console.log(arr)
+
+
+// sort array of strings
+
+
+let arr2=["80", "90", "70"];
+arr2.sort((a,b)=>a-b)
+
+console.log(arr2)
+
+let arr3=["80", "9", "700", 40, 1, 5, 200];
+arr3.sort((a,b)=>a-b)
+
+console.log(arr3)
+
+// sort array of objects
+
+
+const items = [
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
+];
+
+//by value
+
+items.sort((a, b) => a.value - b.value);
+console.log(items)
+
+const items = [
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
+];
+
+//by name
+
+items.sort((a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+});
+  console.log(items)
+
