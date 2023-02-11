@@ -1,0 +1,11 @@
+// forEach
+
+let arr=[9,8,7,6,5]
+for(let i=0;i<arr.length;i++){
+  console.log(arr[i])
+}
+arr.forEach(x =>console.log(x * 2));
+const newArr1=arr.forEach(x =>(x * 2))
+console.log(newArr1)
+
+
